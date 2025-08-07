@@ -584,9 +584,9 @@ public final class R {
 		public static final int btn_radio_off_to_on_mtrl_animation = 0x7f07007e;
 		public static final int btn_radio_on_mtrl = 0x7f07007f;
 		public static final int btn_radio_on_to_off_mtrl_animation = 0x7f070080;
-		public static final int test_level_drawable = 0x7f0700e4;
-		public static final int tooltip_frame_dark = 0x7f0700e5;
-		public static final int tooltip_frame_light = 0x7f0700e6;
+		public static final int test_level_drawable = 0x7f0700e9;
+		public static final int tooltip_frame_dark = 0x7f0700ea;
+		public static final int tooltip_frame_light = 0x7f0700eb;
 	}
 	public static final class id {
 		public static final int action_bar = 0x7f080034;
@@ -657,16 +657,16 @@ public final class R {
 		public static final int submenuarrow = 0x7f0801ca;
 		public static final int submit_area = 0x7f0801cb;
 		public static final int tabMode = 0x7f0801cd;
-		public static final int textSpacerNoButtons = 0x7f0801de;
-		public static final int textSpacerNoTitle = 0x7f0801df;
-		public static final int title = 0x7f0801ec;
-		public static final int titleDividerNoCustom = 0x7f0801ed;
-		public static final int title_template = 0x7f0801ee;
-		public static final int topPanel = 0x7f0801f1;
-		public static final int unchecked = 0x7f0801ff;
-		public static final int uniform = 0x7f080200;
-		public static final int up = 0x7f080202;
-		public static final int wrap_content = 0x7f080213;
+		public static final int textSpacerNoButtons = 0x7f0801e0;
+		public static final int textSpacerNoTitle = 0x7f0801e1;
+		public static final int title = 0x7f0801ee;
+		public static final int titleDividerNoCustom = 0x7f0801ef;
+		public static final int title_template = 0x7f0801f0;
+		public static final int topPanel = 0x7f0801f3;
+		public static final int unchecked = 0x7f080201;
+		public static final int uniform = 0x7f080202;
+		public static final int up = 0x7f080204;
+		public static final int wrap_content = 0x7f080216;
 	}
 	public static final class integer {
 		public static final int abc_config_activityDefaultDur = 0x7f090000;

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:NotesApp.Models"
+             x:Class="NotesApp.Views.NotesHomePage" 
+             Title="NotesHomePage"
+             x:DataType="models:NotesHome">
+    <!-- Add an item to the toolbar -->
+    <ContentPage.ToolbarItems>
+        <!--ToolbarItem Text="remove all" Clicked="EmptyAllNotes" IconImageSource="{FontImage Glyph='-', Color=Black, Size=22}" /-->
+        <ToolbarItem Text="Add" Clicked="Add_Clicked" IconImageSource="{FontImage Glyph='+', Color=Black, Size=22}" />
+    </ContentPage.ToolbarItems>
+
+    <!-- Display notes in a list -->
+    <CollectionView x:Name="notesCollection"
+                ItemsSource="{Binding GroupedNotes}"
+                IsGrouped="True"
+                SelectionMode="Single"
+                SelectionChanged="notesCollection_SelectionChanged"
+                Margin="20">
+
+        <CollectionView.GroupHeaderTemplate>
+            <DataTemplate x:DataType="models:NotesGroup">
+                <Label Text="{Binding CategoryName}"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   TextColor="DarkBlue"
+                   Padding="0,10,0,5" />
+            </DataTemplate>
+        </CollectionView.GroupHeaderTemplate>
+
+        
+                <!--HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                    <CheckBox IsChecked="{Binding IsCompleted, Mode=TwoWay}" CheckedChanged="CheckBox_CheckedChanged" />
+
+                    <VerticalStackLayout>
+                        <Label Text="{Binding Text}"
+                       FontSize="22"
+                       TextColor="{Binding IsCompleted, Converter={StaticResource CompletedTextColorConverter}}" />
+
+                        <Label Text="{Binding Date}" FontSize="14" TextColor="Gray"/>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout-->
+            
+
+        <!-- Define the appearance of each item in the list -->
+        <CollectionView.ItemTemplate>
+            <DataTemplate x:DataType="models:Notes">
+                <StackLayout Padding="5,0">
+                    <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                        <CheckBox IsChecked="{Binding IsCompleted, Mode=TwoWay}" CheckedChanged="CheckBox_CheckedChanged" />
+                        <Label Text="{Binding Text}" FontSize="22" TextColor="Black"/>
+                        <Label Text="{Binding Date}" FontSize="14" TextColor="Black"/>
+                    </HorizontalStackLayout>
+                </StackLayout>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>
+
+    

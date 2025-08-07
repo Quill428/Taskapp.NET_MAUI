@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:NotesApp.Models"
+             x:Class="NotesApp.Views.TaskPage"
+             Title="TaskPage"
+             x:DataType="models:Notes">
+    
+    <VerticalStackLayout Spacing="10" Margin="10" Padding="20">
+        <Label 
+            Text="Welcome to your TO Do List"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        
+        <Label Text="Category" />
+        <Picker x:Name="CategoryPicker"
+            Title="Category"
+            ItemsSource="{Binding Categories}"
+            ItemDisplayBinding="{Binding Name}"
+            SelectedItem="{Binding SelectedCategory}"/>
+
+        <!-- Adding a new category -->
+        <HorizontalStackLayout>
+            <Entry x:Name="NewCategoryEntry" Placeholder="Add new category..." />
+            <!--Button Text="Add" Clicked="AddCategory_Clicked"/-->
+        </HorizontalStackLayout>
+        
+        <Editor x:Name="TextEditor"
+            Placeholder="Type here..."
+            Text="{Binding Text}"
+            TextColor="Black"
+            WidthRequest="200"
+            HeightRequest="200"/>
+        <HorizontalStackLayout>
+            <Button x:Name="SaveButton"
+                    Text="Save"
+                    Clicked="SaveButton_pressed"/>
+            <Button x:Name="DeleteButton"
+                    Text="Delete"
+                    Clicked="DeleteButton_pressed"/>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
