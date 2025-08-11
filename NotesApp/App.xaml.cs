@@ -15,7 +15,7 @@ namespace NotesApp
             {
                 if (database == null)
                 {
-                    string dbPath = Path.Combine(FileSystem.AppDataDirectory, "NotesApp.db3");
+                    string dbPath = Path.Combine(FileSystem.AppDataDirectory, "Notes.db3"); //was NotesApp.db3
                     database = new NotesDatabase(dbPath);
                 }
                 return database;
@@ -26,8 +26,11 @@ namespace NotesApp
             InitializeComponent();
 
             // Initialize NotesRepo
-            NotesRepo = new NotesDatabase(Path.Combine(FileSystem.AppDataDirectory, "notes.db3"));
+            //NotesRepo = new NotesDatabase(Path.Combine(FileSystem.AppDataDirectory, "notes.db3"));
+            
 
+            //string dbPath = Path.Combine(FileSystem.AppDataDirectory, "notes.db3");
+            //NotesRepo = new NotesDatabase(dbPath);
 
 
             MainPage = new AppShell();

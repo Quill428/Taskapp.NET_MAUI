@@ -1,9 +1,22 @@
-namespace NotesApp.Views;
+﻿namespace NotesApp.Views;
+using NotesApp.Models;  // to access Notes class
+using NotesApp.Data;    // if you refer to App.Database or your repo
 
 [QueryProperty(nameof(ItemId), nameof(ItemId))]
+[QueryProperty(nameof(NoteId), nameof(NoteId))]
 public partial class TaskPage : ContentPage
 {
-    private List<string> categories = new() { "Work", "School", "Personal" };
+    private List<string> categories = new() { "Work", "School", "Personal" }; //need to change this to ones that exist
+
+
+    public string NoteId
+    {
+        set
+        {
+            if (int.TryParse(value, out var id))
+                _ = LoadNoteByIdAsync(id);
+        }
+    }
 
     private string itemId;
     public string ItemId
@@ -15,17 +28,30 @@ public partial class TaskPage : ContentPage
             LoadNote(value); // Make sure this method loads the note
         }
     }
+
+
     public TaskPage()
 	{
 		InitializeComponent();
 
-        string appDataPath = FileSystem.AppDataDirectory;
-        string randomFileName = $"{Path.GetRandomFileName()}.notes.txt";
+        //string appDataPath = FileSystem.AppDataDirectory;
+        //string randomFileName = $"{Path.GetRandomFileName()}.notes.txt";
 
-        LoadNote(Path.Combine(appDataPath, randomFileName));
+        //LoadNote(Path.Combine(appDataPath, randomFileName));
 
         CategoryPicker.ItemsSource = categories;
     }
+
+    //private int noteId;
+    //public int NoteId
+    //{
+    //    get => noteId;
+    //    set
+    //    {
+    //        noteId = value;
+    //        LoadNoteById(value);
+    //    }
+    //}
 
     private async void LoadNote(string fileName)
     {
@@ -67,17 +93,73 @@ public partial class TaskPage : ContentPage
 
     private async void SaveButton_pressed(object sender, EventArgs e)
 	{
-        if (BindingContext is Models.Notes note)
+        try
         {
-            note.Text = TextEditor.Text;
-            note.Category = NewCategoryEntry.Text?.Trim() ?? "Uncategorized";
-            //note.Save();'
-            note.Date = DateTime.Now;
+            if (BindingContext is Notes note)
+            {
+                note.Text = TextEditor.Text;
+                note.Category = NewCategoryEntry.Text?.Trim() ?? "Uncategorized";
+                note.Date = DateTime.Now;
 
-            await App.Database.SaveNoteAsync(note);
+                // Ensure filename exists for new notes
+                if (string.IsNullOrEmpty(note.Filename))
+                {
+                    string appDataPath = FileSystem.AppDataDirectory;
+                    note.Filename = Path.Combine(appDataPath, $"{Path.GetRandomFileName()}.notes.txt");
+                }
+
+                // Save to database
+                var result = await App.Database.SaveNoteAsync(note);
+
+                // Debug logging
+                Console.WriteLine($"Save result: {result}");
+                Console.WriteLine($"Note ID after save: {note.Id}");
+                Console.WriteLine($"Note Text: {note.Text?.Substring(0, Math.Min(50, note.Text?.Length ?? 0))}");
+                Console.WriteLine($"Note Category: {note.Category}");
+                Console.WriteLine($"Note Filename: {note.Filename}");
+
+                // Verify the save worked by trying to load it back
+                var savedNote = await App.Database.GetNoteByIdAsync(note.Id);
+                if (savedNote != null)
+                {
+                    Console.WriteLine("✓ Note successfully saved and can be retrieved!");
+                    await DisplayAlert("Success", "Task saved successfully!", "OK");
+                }
+                else
+                {
+                    Console.WriteLine("✗ Note save failed - cannot retrieve saved note");
+                    await DisplayAlert("Error", "Failed to save task properly", "OK");
+                    return;
+                }
+            }
         }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Save error: {ex.Message}");
+            Console.WriteLine($"Stack trace: {ex.StackTrace}");
+            await DisplayAlert("Error", $"Failed to save: {ex.Message}", "OK");
+            return;
+        }
+
         await Shell.Current.GoToAsync("..");
     }
+
+    //            // Use consistent database reference - choose either App.Database OR App.NotesRepo
+    //            await App.Database.SaveNoteAsync(note);
+
+    //            // Debug: Check if save worked
+    //            Console.WriteLine($"Saved note: {note.Id}, Category: {note.Category}, Text: {note.Text?.Substring(0, Math.Min(50, note.Text?.Length ?? 0))}");
+
+    //            await DisplayAlert("Success", "Task saved successfully!", "OK");
+    //        }
+    //    }
+    //    catch (Exception ex)
+    //    {
+    //        await DisplayAlert("Error", $"Failed to save: {ex.Message}", "OK");
+    //        return; // Don't navigate if save failed
+    //    }
+    //    await Shell.Current.GoToAsync("..");
+    //}
 
     private void AddCategory_Clicked(object sender, EventArgs e)
     {
@@ -101,15 +183,18 @@ public partial class TaskPage : ContentPage
             //if (!confirm) return;
 
             // Delete from SQLite database
-            if (note.Id != 0)
+            try
             {
-                await App.NotesRepo.DeleteNoteAsync(note);
-            }
+                if (note.Id != 0)
+                    await App.NotesRepo.DeleteNoteAsync(note);
 
-            // Safely delete the file
-            if (!string.IsNullOrEmpty(note.Filename) && File.Exists(note.Filename))
+                // optional: delete file only if you continue to maintain files
+                if (!string.IsNullOrEmpty(note.Filename) && File.Exists(note.Filename))
+                    File.Delete(note.Filename);
+            }
+            catch (Exception ex)
             {
-                File.Delete(note.Filename);
+                await DisplayAlert("Error deleting note", ex.Message, "OK");
             }
 
             // Clear the UI and return
@@ -118,6 +203,42 @@ public partial class TaskPage : ContentPage
         }
 	}
 
+    private async Task LoadNoteByIdAsync(int id)
+    {
+        Models.Notes note;
 
+        if (id == 0) // New note
+        {
+            // Create a completely new note
+            string appDataPath = FileSystem.AppDataDirectory;
+            string randomFileName = Path.Combine(appDataPath, $"{Path.GetRandomFileName()}.notes.txt");
+
+            note = new Models.Notes
+            {
+                Id = 0, // This will trigger INSERT in SaveNoteAsync
+                Filename = randomFileName,
+                Date = DateTime.Now,
+                Category = "Uncategorized",
+                Text = string.Empty
+            };
+            Console.WriteLine("Created new note for editing");
+        }
+        else
+        {
+            // Load existing note
+            note = await App.Database.GetNoteByIdAsync(id);
+            if (note == null)
+            {
+                await DisplayAlert("Error", "Note not found!", "OK");
+                await Shell.Current.GoToAsync("..");
+                return;
+            }
+            Console.WriteLine($"Loaded existing note: ID {note.Id}");
+        }
+
+        BindingContext = note;
+        TextEditor.Text = note.Text ?? string.Empty;
+        NewCategoryEntry.Text = note.Category ?? "Uncategorized";
+    }
 
 }

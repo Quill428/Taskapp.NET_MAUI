@@ -14,7 +14,7 @@ namespace NotesApp.Models
         public int CategoryId { get; set; } // Foreign key to Category
 
         public string Filename { get; set; }
-        public string Category { get; set; }
+        public  string Category { get; set; }
 
         public string Text { get; set; }
         public DateTime Date { get; set; }

@@ -4,6 +4,11 @@
         <name>NotesApp</name>
     </assembly>
     <members>
+        <member name="M:NotesApp.Views.NotesHomePage.DeleteCategoryButton_Clicked(System.Object,System.EventArgs)">
+            <summary>
+              {
+            </summary>
+        </member>
         <member name="T:NotesApp.Resource">
             <summary>
             Android Resource Designer class.

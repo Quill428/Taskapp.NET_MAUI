@@ -12,7 +12,7 @@
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
         
-        <Label Text="Category" />
+        <!--Label Text="Category" /-->
         <Picker x:Name="CategoryPicker"
             Title="Category"
             ItemsSource="{Binding Categories}"

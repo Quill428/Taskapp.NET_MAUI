@@ -21,13 +21,62 @@
 
         <CollectionView.GroupHeaderTemplate>
             <DataTemplate x:DataType="models:NotesGroup">
+                <Grid Padding="0,5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                        <!-- Category Name -->
+                    <Label Grid.Row="0" Grid.Column="0"
+                        Text="{Binding CategoryName}"
+                       FontSize="18"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center" />
+
+                    
+                    <!-- Delete Button -->
+                    <Button Grid.Row="0" Grid.Column="1"
+                        Text="🗑 Delete"
+                        Clicked="DeleteCategoryButton_Clicked"
+                        FontSize="14"
+                        BackgroundColor="Transparent"
+                        TextColor="Red"
+                        CommandParameter="{Binding CategoryName}"/>
+                    
+                    <!--progress bar-->
+                    <ProgressBar Grid.Row="1" Grid.Column="0"
+                                 Progress="{Binding Progress, Mode=OneWay}"
+                                 HeightRequest="8"
+                                 VerticalOptions="Center"
+                                 Margin="0,5,0,0"/>
+                    <Label Grid.Row="1" Grid.Column="1"
+                        Text="{Binding Progress, StringFormat='{0:F0}%'}" />
+                    <Label Grid.Row="2" Grid.Column="0"
+                           Text="{Binding TaskCount, StringFormat='Tasks: {0}'}"
+                           FontSize="14"
+                           TextColor="Black"
+                           VerticalOptions="Center"/>
+
+
+                </Grid>
+            </DataTemplate>
+        </CollectionView.GroupHeaderTemplate>
+
+        <!--CollectionView.GroupHeaderTemplate>
+            <DataTemplate x:DataType="models:NotesGroup">
                 <Label Text="{Binding CategoryName}"
                    FontSize="24"
                    FontAttributes="Bold"
                    TextColor="DarkBlue"
                    Padding="0,10,0,5" />
             </DataTemplate>
-        </CollectionView.GroupHeaderTemplate>
+        </CollectionView.GroupHeaderTemplate-->
 
         
                 <!--HorizontalStackLayout Spacing="10" VerticalOptions="Center">
