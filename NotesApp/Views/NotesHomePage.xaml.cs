@@ -79,19 +79,27 @@ public partial class NotesHomePage : ContentPage
             await App.Database.SaveNoteAsync(note);
 
             var viewModel = (NotesHome)BindingContext;
-            foreach (var category in viewModel.GroupedNotes)
+            var category = viewModel.GroupedNotes.FirstOrDefault(c => c.CategoryName == note.Category);
+
+            if (category != null)
             {
-                var notesInCategory = category.ToList();
-                category.TaskCount = notesInCategory.Count;
-                if (notesInCategory.Count > 0)
-                {
-                    category.Progress = (double)notesInCategory.Count(n => n.IsCompleted) / notesInCategory.Count * 100;
-                }
-                else
-                {
-                    category.Progress = 0;
-                }
+                category.UpdateProgress(); // This will recalculate and notify UI
             }
+
+            //var viewModel = (NotesHome)BindingContext;
+            //foreach (var category in viewModel.GroupedNotes)
+            //{
+            //    var notesInCategory = category.ToList();
+            //    category.TaskCount = notesInCategory.Count;
+            //    if (notesInCategory.Count > 0)
+            //    {
+            //        category.Progress = (double)notesInCategory.Count(n => n.IsCompleted) / notesInCategory.Count * 100;
+            //    }
+            //    else
+            //    {
+            //        category.Progress = 0;
+            //    }
+            //}
             //await viewModel.UpdateCategoryProgressAsync(note.CategoryId);
 
         }
@@ -163,16 +171,20 @@ public partial class NotesHomePage : ContentPage
             try
             {
                 // Delete all notes in DB for that category
-                await App.NotesRepo.DeleteNotesByCategoryAsync(group.CategoryName);
+                var result = await App.Database.DeleteNotesByCategoryAsync(group.CategoryName);
+                Console.WriteLine($"Deleted {result} notes from category '{group.CategoryName}'");
 
                 // If you have a separate Categories table, optionally delete category record as well
-                // await App.NotesRepo.DeleteCategoryByNameAsync(group.CategoryName);
+                // await App.Database.DeleteCategoryByNameAsync(group.CategoryName);
 
-                // refresh UI
+                await DisplayAlert("Success", $"Deleted category '{group.CategoryName}' and all its notes!", "OK");
+
+                // Refresh UI
                 await ((NotesHome)BindingContext).LoadNotesAsync();
             }
             catch (Exception ex)
             {
+                Console.WriteLine($"Delete category error: {ex.Message}");
                 await DisplayAlert("Error", ex.Message, "OK");
             }
         }

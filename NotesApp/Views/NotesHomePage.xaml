@@ -18,57 +18,74 @@
                 SelectionMode="Single"
                 SelectionChanged="notesCollection_SelectionChanged"
                 Margin="20">
+       
 
         <CollectionView.GroupHeaderTemplate>
             <DataTemplate x:DataType="models:NotesGroup">
-                <Grid Padding="0,5">
-                    <Grid.RowDefinitions>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
+                <Border BackgroundColor="{Binding CategoryColor}" 
+                 Stroke="{Binding CategoryColor}"
+                 StrokeThickness="2"
+                 Padding="15,10"
+                 Margin="0,10,0,5">     
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10"/>
+                    </Border.StrokeShape>
+                    <Grid Padding="0,5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>                            
+                        </Grid.ColumnDefinitions>
                         <!-- Category Name -->
-                    <Label Grid.Row="0" Grid.Column="0"
-                        Text="{Binding CategoryName}"
-                       FontSize="18"
-                       FontAttributes="Bold"
-                       VerticalOptions="Center" />
-
-                    
-                    <!-- Delete Button -->
-                    <Button Grid.Row="0" Grid.Column="1"
-                        Text="🗑 Delete"
-                        Clicked="DeleteCategoryButton_Clicked"
-                        FontSize="14"
-                        BackgroundColor="Transparent"
-                        TextColor="Red"
-                        CommandParameter="{Binding CategoryName}"/>
-                    
-                    <!--progress bar-->
-                    <ProgressBar Grid.Row="1" Grid.Column="0"
-                                 Progress="{Binding Progress, Mode=OneWay}"
-                                 HeightRequest="8"
-                                 VerticalOptions="Center"
-                                 Margin="0,5,0,0"/>
-                    <Label Grid.Row="1" Grid.Column="1"
-                        Text="{Binding Progress, StringFormat='{0:F0}%'}" />
-                    <Label Grid.Row="2" Grid.Column="0"
-                           Text="{Binding TaskCount, StringFormat='Tasks: {0}'}"
-                           FontSize="14"
-                           TextColor="Black"
-                           VerticalOptions="Center"/>
+                        <Label Grid.Row="0" Grid.Column="0"
+                            Text="{Binding CategoryName}"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           VerticalOptions="Center" />
 
 
-                </Grid>
+                        <!-- Delete Button -->
+                        <Button Grid.Row="0" Grid.Column="1"
+                            Text="🗑 Delete"
+                            Clicked="DeleteCategoryButton_Clicked"
+                            FontSize="14"
+                            BackgroundColor="Transparent"
+                            TextColor="Red"
+                            WidthRequest="40"
+                            HeightRequest="40"/>
+                        <!--CommandParameter="{Binding CategoryName}"-->
+
+                        <!--progress bar-->
+                        <ProgressBar Grid.Row="1" Grid.Column="0"
+                                     Progress="{Binding Progress, Mode=OneWay}"
+                                     HeightRequest="8"
+                                     VerticalOptions="Center"
+                                     Margin="0,5,0,0"/>
+                        <Label Grid.Row="1" Grid.Column="1"
+                            Text="{Binding ProgressPercentage, StringFormat='{0:F0}% Complete'}" />
+
+                        <HorizontalStackLayout Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Spacing="15" Margin="0,5">
+                            <Label Text="{Binding TaskCountText, StringFormat='Tasks: {0}'}"
+                            FontSize="14"
+                            TextColor="White"
+                            FontAttributes="Bold"/>
+                                <Label Text="{Binding RemainingTasksText}"
+                            FontSize="14"
+                            TextColor="White"/>
+                        </HorizontalStackLayout>
+
+
+
+                    </Grid>
+                </Border>
             </DataTemplate>
         </CollectionView.GroupHeaderTemplate>
 
-        <!--CollectionView.GroupHeaderTemplate>
+            <!--CollectionView.GroupHeaderTemplate>
             <DataTemplate x:DataType="models:NotesGroup">
                 <Label Text="{Binding CategoryName}"
                    FontSize="24"

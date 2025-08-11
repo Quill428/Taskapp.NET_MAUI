@@ -7,8 +7,20 @@
       "RelativeMoniker": "D:0:0:{37D3171D-FB7E-4063-9B78-DD3068CB0842}|NotesApp\\NotesApp.csproj|solutionrelative:notesapp\\views\\taskpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{37D3171D-FB7E-4063-9B78-DD3068CB0842}|NotesApp\\NotesApp.csproj|c:\\users\\thebr\\source\\repos\\notesapp\\taskapp.net_maui\\notesapp\\views\\taskpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{37D3171D-FB7E-4063-9B78-DD3068CB0842}|NotesApp\\NotesApp.csproj|solutionrelative:notesapp\\views\\taskpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37D3171D-FB7E-4063-9B78-DD3068CB0842}|NotesApp\\NotesApp.csproj|c:\\users\\thebr\\source\\repos\\notesapp\\taskapp.net_maui\\notesapp\\views\\noteshomepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{37D3171D-FB7E-4063-9B78-DD3068CB0842}|NotesApp\\NotesApp.csproj|solutionrelative:notesapp\\views\\noteshomepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{37D3171D-FB7E-4063-9B78-DD3068CB0842}|NotesApp\\NotesApp.csproj|c:\\users\\thebr\\source\\repos\\notesapp\\taskapp.net_maui\\notesapp\\views\\noteshomepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{37D3171D-FB7E-4063-9B78-DD3068CB0842}|NotesApp\\NotesApp.csproj|solutionrelative:notesapp\\views\\noteshomepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37D3171D-FB7E-4063-9B78-DD3068CB0842}|NotesApp\\NotesApp.csproj|c:\\users\\thebr\\source\\repos\\notesapp\\taskapp.net_maui\\notesapp\\models\\notesgroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37D3171D-FB7E-4063-9B78-DD3068CB0842}|NotesApp\\NotesApp.csproj|solutionrelative:notesapp\\models\\notesgroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{37D3171D-FB7E-4063-9B78-DD3068CB0842}|NotesApp\\NotesApp.csproj|c:\\users\\thebr\\source\\repos\\notesapp\\taskapp.net_maui\\notesapp\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,24 +35,12 @@
       "RelativeMoniker": "D:0:0:{37D3171D-FB7E-4063-9B78-DD3068CB0842}|NotesApp\\NotesApp.csproj|solutionrelative:notesapp\\data\\notesdatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{37D3171D-FB7E-4063-9B78-DD3068CB0842}|NotesApp\\NotesApp.csproj|c:\\users\\thebr\\source\\repos\\notesapp\\taskapp.net_maui\\notesapp\\views\\noteshomepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{37D3171D-FB7E-4063-9B78-DD3068CB0842}|NotesApp\\NotesApp.csproj|solutionrelative:notesapp\\views\\noteshomepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{37D3171D-FB7E-4063-9B78-DD3068CB0842}|NotesApp\\NotesApp.csproj|c:\\users\\thebr\\source\\repos\\notesapp\\taskapp.net_maui\\notesapp\\models\\notes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{37D3171D-FB7E-4063-9B78-DD3068CB0842}|NotesApp\\NotesApp.csproj|solutionrelative:notesapp\\models\\notes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{37D3171D-FB7E-4063-9B78-DD3068CB0842}|NotesApp\\NotesApp.csproj|c:\\users\\thebr\\source\\repos\\notesapp\\taskapp.net_maui\\notesapp\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{37D3171D-FB7E-4063-9B78-DD3068CB0842}|NotesApp\\NotesApp.csproj|solutionrelative:notesapp\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{37D3171D-FB7E-4063-9B78-DD3068CB0842}|NotesApp\\NotesApp.csproj|c:\\users\\thebr\\source\\repos\\notesapp\\taskapp.net_maui\\notesapp\\views\\taskpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{37D3171D-FB7E-4063-9B78-DD3068CB0842}|NotesApp\\NotesApp.csproj|solutionrelative:notesapp\\views\\taskpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{37D3171D-FB7E-4063-9B78-DD3068CB0842}|NotesApp\\NotesApp.csproj|c:\\users\\thebr\\source\\repos\\notesapp\\taskapp.net_maui\\notesapp\\models\\notesgroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{37D3171D-FB7E-4063-9B78-DD3068CB0842}|NotesApp\\NotesApp.csproj|solutionrelative:notesapp\\models\\notesgroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{37D3171D-FB7E-4063-9B78-DD3068CB0842}|NotesApp\\NotesApp.csproj|c:\\users\\thebr\\source\\repos\\notesapp\\taskapp.net_maui\\notesapp\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -69,44 +69,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Category.cs",
-              "DocumentMoniker": "C:\\Users\\thebr\\source\\repos\\NotesApp\\Taskapp.NET_MAUI\\NotesApp\\Models\\Category.cs",
-              "RelativeDocumentMoniker": "NotesApp\\Models\\Category.cs",
-              "ToolTip": "C:\\Users\\thebr\\source\\repos\\NotesApp\\Taskapp.NET_MAUI\\NotesApp\\Models\\Category.cs",
-              "RelativeToolTip": "NotesApp\\Models\\Category.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAkwCoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-07T23:01:00.284Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ReadMe.txt",
-              "DocumentMoniker": "C:\\Users\\thebr\\.nuget\\packages\\communitytoolkit.maui.core\\12.1.0\\ReadMe.txt",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\.nuget\\packages\\communitytoolkit.maui.core\\12.1.0\\ReadMe.txt",
-              "ToolTip": "C:\\Users\\thebr\\.nuget\\packages\\communitytoolkit.maui.core\\12.1.0\\ReadMe.txt",
-              "RelativeToolTip": "..\\..\\..\\..\\.nuget\\packages\\communitytoolkit.maui.core\\12.1.0\\ReadMe.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-08-06T21:50:17.673Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "NotesDatabase.cs",
-              "DocumentMoniker": "C:\\Users\\thebr\\source\\repos\\NotesApp\\Taskapp.NET_MAUI\\NotesApp\\Data\\NotesDatabase.cs",
-              "RelativeDocumentMoniker": "NotesApp\\Data\\NotesDatabase.cs",
-              "ToolTip": "C:\\Users\\thebr\\source\\repos\\NotesApp\\Taskapp.NET_MAUI\\NotesApp\\Data\\NotesDatabase.cs",
-              "RelativeToolTip": "NotesApp\\Data\\NotesDatabase.cs",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAqwHQAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T22:05:00.11Z",
+              "DocumentIndex": 2,
+              "Title": "NotesHomePage.xaml",
+              "DocumentMoniker": "C:\\Users\\thebr\\source\\repos\\NotesApp\\Taskapp.NET_MAUI\\NotesApp\\Views\\NotesHomePage.xaml",
+              "RelativeDocumentMoniker": "NotesApp\\Views\\NotesHomePage.xaml",
+              "ToolTip": "C:\\Users\\thebr\\source\\repos\\NotesApp\\Taskapp.NET_MAUI\\NotesApp\\Views\\NotesHomePage.xaml",
+              "RelativeToolTip": "NotesApp\\Views\\NotesHomePage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-29T23:05:15.505Z",
               "EditorCaption": ""
             },
             {
@@ -123,32 +98,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "NotesGroup.cs",
-              "DocumentMoniker": "C:\\Users\\thebr\\source\\repos\\NotesApp\\Taskapp.NET_MAUI\\NotesApp\\Models\\NotesGroup.cs",
-              "RelativeDocumentMoniker": "NotesApp\\Models\\NotesGroup.cs",
-              "ToolTip": "C:\\Users\\thebr\\source\\repos\\NotesApp\\Taskapp.NET_MAUI\\NotesApp\\Models\\NotesGroup.cs",
-              "RelativeToolTip": "NotesApp\\Models\\NotesGroup.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAxwBMAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-03T22:05:28.127Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AppShell.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\thebr\\source\\repos\\NotesApp\\Taskapp.NET_MAUI\\NotesApp\\AppShell.xaml.cs",
-              "RelativeDocumentMoniker": "NotesApp\\AppShell.xaml.cs",
-              "ToolTip": "C:\\Users\\thebr\\source\\repos\\NotesApp\\Taskapp.NET_MAUI\\NotesApp\\AppShell.xaml.cs",
-              "RelativeToolTip": "NotesApp\\AppShell.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T22:53:28.505Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 11,
               "Title": "AppShell.xaml",
               "DocumentMoniker": "C:\\Users\\thebr\\source\\repos\\NotesApp\\Taskapp.NET_MAUI\\NotesApp\\AppShell.xaml",
@@ -161,7 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "NotesHome.cs",
               "DocumentMoniker": "C:\\Users\\thebr\\source\\repos\\NotesApp\\Taskapp.NET_MAUI\\NotesApp\\Models\\NotesHome.cs",
               "RelativeDocumentMoniker": "NotesApp\\Models\\NotesHome.cs",
@@ -169,46 +118,44 @@
               "RelativeToolTip": "NotesApp\\Models\\NotesHome.cs",
               "ViewState": "AgIAADEAAAAAAAAAAAAuwEIAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T20:48:21.408Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-30T20:48:21.408Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "NotesDatabase.cs",
+              "DocumentMoniker": "C:\\Users\\thebr\\source\\repos\\NotesApp\\Taskapp.NET_MAUI\\NotesApp\\Data\\NotesDatabase.cs",
+              "RelativeDocumentMoniker": "NotesApp\\Data\\NotesDatabase.cs",
+              "ToolTip": "C:\\Users\\thebr\\source\\repos\\NotesApp\\Taskapp.NET_MAUI\\NotesApp\\Data\\NotesDatabase.cs",
+              "RelativeToolTip": "NotesApp\\Data\\NotesDatabase.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAqwHQAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T22:05:00.11Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "NotesHomePage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\thebr\\source\\repos\\NotesApp\\Taskapp.NET_MAUI\\NotesApp\\Views\\NotesHomePage.xaml.cs",
-              "RelativeDocumentMoniker": "NotesApp\\Views\\NotesHomePage.xaml.cs",
-              "ToolTip": "C:\\Users\\thebr\\source\\repos\\NotesApp\\Taskapp.NET_MAUI\\NotesApp\\Views\\NotesHomePage.xaml.cs",
-              "RelativeToolTip": "NotesApp\\Views\\NotesHomePage.xaml.cs",
-              "ViewState": "AgIAAHsAAAAAAAAAAAAgwDUAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T09:58:44.318Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "NotesHomePage.xaml",
-              "DocumentMoniker": "C:\\Users\\thebr\\source\\repos\\NotesApp\\Taskapp.NET_MAUI\\NotesApp\\Views\\NotesHomePage.xaml",
-              "RelativeDocumentMoniker": "NotesApp\\Views\\NotesHomePage.xaml",
-              "ToolTip": "C:\\Users\\thebr\\source\\repos\\NotesApp\\Taskapp.NET_MAUI\\NotesApp\\Views\\NotesHomePage.xaml",
-              "RelativeToolTip": "NotesApp\\Views\\NotesHomePage.xaml",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAAAGIAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-07-29T23:05:15.505Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "TaskPage.xaml",
               "DocumentMoniker": "C:\\Users\\thebr\\source\\repos\\NotesApp\\Taskapp.NET_MAUI\\NotesApp\\Views\\TaskPage.xaml",
               "RelativeDocumentMoniker": "NotesApp\\Views\\TaskPage.xaml",
               "ToolTip": "C:\\Users\\thebr\\source\\repos\\NotesApp\\Taskapp.NET_MAUI\\NotesApp\\Views\\TaskPage.xaml",
               "RelativeToolTip": "NotesApp\\Views\\TaskPage.xaml",
-              "ViewState": "AgIAABAAAAAAAAAAAAAYwCQAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-07-29T23:17:49.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NotesHomePage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\thebr\\source\\repos\\NotesApp\\Taskapp.NET_MAUI\\NotesApp\\Views\\NotesHomePage.xaml.cs",
+              "RelativeDocumentMoniker": "NotesApp\\Views\\NotesHomePage.xaml.cs",
+              "ToolTip": "C:\\Users\\thebr\\source\\repos\\NotesApp\\Taskapp.NET_MAUI\\NotesApp\\Views\\NotesHomePage.xaml.cs",
+              "RelativeToolTip": "NotesApp\\Views\\NotesHomePage.xaml.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAAwFYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T09:58:44.318Z",
               "EditorCaption": ""
             },
             {
@@ -219,14 +166,63 @@
               "RelativeDocumentMoniker": "NotesApp\\Views\\TaskPage.xaml.cs",
               "ToolTip": "C:\\Users\\thebr\\source\\repos\\NotesApp\\Taskapp.NET_MAUI\\NotesApp\\Views\\TaskPage.xaml.cs",
               "RelativeToolTip": "NotesApp\\Views\\TaskPage.xaml.cs",
-              "ViewState": "AgIAALAAAAAAAAAAAAASwLgAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-30T11:26:26.17Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
+              "Title": "AppShell.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\thebr\\source\\repos\\NotesApp\\Taskapp.NET_MAUI\\NotesApp\\AppShell.xaml.cs",
+              "RelativeDocumentMoniker": "NotesApp\\AppShell.xaml.cs",
+              "ToolTip": "C:\\Users\\thebr\\source\\repos\\NotesApp\\Taskapp.NET_MAUI\\NotesApp\\AppShell.xaml.cs",
+              "RelativeToolTip": "NotesApp\\AppShell.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T22:53:28.505Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\thebr\\source\\repos\\NotesApp\\Taskapp.NET_MAUI\\NotesApp\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "NotesApp\\Models\\Category.cs",
+              "ToolTip": "C:\\Users\\thebr\\source\\repos\\NotesApp\\Taskapp.NET_MAUI\\NotesApp\\Models\\Category.cs",
+              "RelativeToolTip": "NotesApp\\Models\\Category.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAkwCoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T23:01:00.284Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "NotesGroup.cs",
+              "DocumentMoniker": "C:\\Users\\thebr\\source\\repos\\NotesApp\\Taskapp.NET_MAUI\\NotesApp\\Models\\NotesGroup.cs",
+              "RelativeDocumentMoniker": "NotesApp\\Models\\NotesGroup.cs",
+              "ToolTip": "C:\\Users\\thebr\\source\\repos\\NotesApp\\Taskapp.NET_MAUI\\NotesApp\\Models\\NotesGroup.cs",
+              "RelativeToolTip": "NotesApp\\Models\\NotesGroup.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-03T22:05:28.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ReadMe.txt",
+              "DocumentMoniker": "C:\\Users\\thebr\\.nuget\\packages\\communitytoolkit.maui.core\\12.1.0\\ReadMe.txt",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\.nuget\\packages\\communitytoolkit.maui.core\\12.1.0\\ReadMe.txt",
+              "ToolTip": "C:\\Users\\thebr\\.nuget\\packages\\communitytoolkit.maui.core\\12.1.0\\ReadMe.txt",
+              "RelativeToolTip": "..\\..\\..\\..\\.nuget\\packages\\communitytoolkit.maui.core\\12.1.0\\ReadMe.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-08-06T21:50:17.673Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Notes.cs",
               "DocumentMoniker": "C:\\Users\\thebr\\source\\repos\\NotesApp\\Taskapp.NET_MAUI\\NotesApp\\Models\\Notes.cs",
               "RelativeDocumentMoniker": "NotesApp\\Models\\Notes.cs",
@@ -234,12 +230,11 @@
               "RelativeToolTip": "NotesApp\\Models\\Notes.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAADwvxIAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T10:06:11.632Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-30T10:06:11.632Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\thebr\\source\\repos\\NotesApp\\Taskapp.NET_MAUI\\NotesApp\\App.xaml.cs",
               "RelativeDocumentMoniker": "NotesApp\\App.xaml.cs",
@@ -247,8 +242,7 @@
               "RelativeToolTip": "NotesApp\\App.xaml.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAuwCUAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T09:51:25.199Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-30T09:51:25.199Z"
             },
             {
               "$type": "Document",
@@ -260,8 +254,7 @@
               "RelativeToolTip": "NotesApp\\App.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-07-30T09:51:23.195Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-30T09:51:23.195Z"
             }
           ]
         }

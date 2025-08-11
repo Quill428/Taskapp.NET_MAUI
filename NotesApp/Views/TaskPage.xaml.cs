@@ -179,29 +179,41 @@ public partial class TaskPage : ContentPage
         if (BindingContext is Models.Notes note)
         {
             // asks for confirmation
-            //bool confirm = await DisplayAlert("Delete", "Are you sure you want to delete this note?", "Yes", "No");
-            //if (!confirm) return;
+            bool confirm = await DisplayAlert("Delete", "Are you sure you want to delete this note?", "Yes", "No");
+            if (!confirm) return;
 
             // Delete from SQLite database
             try
             {
                 if (note.Id != 0)
-                    await App.NotesRepo.DeleteNoteAsync(note);
+                {
+                    var result = await App.Database.DeleteNoteAsync(note);
+                    Console.WriteLine($"Delete result: {result} rows affected");
 
-                // optional: delete file only if you continue to maintain files
-                if (!string.IsNullOrEmpty(note.Filename) && File.Exists(note.Filename))
-                    File.Delete(note.Filename);
+                    // Optional: delete file only if you continue to maintain files
+                    if (!string.IsNullOrEmpty(note.Filename) && File.Exists(note.Filename))
+                        File.Delete(note.Filename);
+
+                    await DisplayAlert("Success", "Note deleted successfully!", "OK");
+                }
+                else
+                {
+                    Console.WriteLine("Cannot delete note with ID 0");
+                    await DisplayAlert("Error", "Cannot delete unsaved note", "OK");
+                }
             }
             catch (Exception ex)
             {
+                Console.WriteLine($"Delete error: {ex.Message}");
                 await DisplayAlert("Error deleting note", ex.Message, "OK");
+                return; // Don't navigate if delete failed
             }
 
             // Clear the UI and return
             TextEditor.Text = string.Empty;
             await Shell.Current.GoToAsync("..");
         }
-	}
+    }
 
     private async Task LoadNoteByIdAsync(int id)
     {
