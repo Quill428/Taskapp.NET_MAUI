@@ -5,14 +5,17 @@
              xmlns:converters="clr-namespace:NotesApp.Converters"
              x:Class="NotesApp.App">
     <Application.Resources>
-        <ResourceDictionary>
-            
-            <converters:CompletedTextColorConverter x:Key="CompletedTextColorConverter" />
+        <ResourceDictionary>            
             
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />                
             </ResourceDictionary.MergedDictionaries>
+            
+            <converters:CompletedTextColorConverter x:Key="CompletedTextColorConverter" />
+            <converters:CategoryToColorConverter x:Key="CategoryToColorConverter" />
+            <converters:BoolToTextDecorationsConverter x:Key="BoolToTextDecorationsConverter" />
+            
         </ResourceDictionary>
     </Application.Resources>
 </Application>

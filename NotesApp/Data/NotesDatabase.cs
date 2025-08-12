@@ -1,10 +1,5 @@
 ﻿using NotesApp.Models;
 using SQLite;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 //using static Android.Provider.ContactsContract.CommonDataKinds;
 
 namespace NotesApp.Data
@@ -78,7 +73,7 @@ namespace NotesApp.Data
 
         public Task<int> UpdateCategoryAsync(Category category)
         {
-            return database.UpdateAsync(category); 
+            return database.UpdateAsync(category);
             //return _database.Table<Category>().ToListAsync();
         }
         //public async Task<double> GetCategoryProgressAsync(int categoryId)
@@ -90,7 +85,7 @@ namespace NotesApp.Data
         //    return (double)completed / notes.Count * 100;
         //}
 
-  
+
 
 
         public async Task<double> GetCategoryProgressAsync(int categoryId)

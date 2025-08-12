@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NotesApp.Views.PrivacyPolicyPage"
+             Title="Privacy Policy"
+             BackgroundColor="White">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="15">
+
+            <!-- Header -->
+            <Label Text="Welcome to NotesApp!"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   TextColor="white"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,20,0,10"/>
+
+            <Label Text="Privacy &amp; Data Usage Policy"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   TextColor="black"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,0,0,20"/>
+
+            <!-- Privacy Policy Content -->
+            <Border BackgroundColor="black" 
+                   Stroke="#E0E0E0" 
+                   StrokeThickness="10" 
+                   Padding="15"
+                   Shadow="{OnPlatform Default='0,2,5,#40000000', iOS='0,1,3,#30000000'}">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10"/>
+                </Border.StrokeShape>
+
+                <StackLayout Spacing="15">
+
+                    <!-- Data Collection Section -->
+                    <Label Text="📱 What Data We Collect"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           TextColor="#2196F3"/>
+
+                    <Label TextColor="#555" FontSize="14">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="• "/>
+                                <Span Text="Your tasks and notes content" FontAttributes="Bold"/>
+                                <Span Text=" - stored locally on your device only"/>
+                                <Span Text="&#10;• "/>
+                                <Span Text="Task categories and completion status" FontAttributes="Bold"/>
+                                <Span Text=" - to organize your notes"/>
+                                <Span Text="&#10;• "/>
+                                <Span Text="Creation and modification dates" FontAttributes="Bold"/>
+                                <Span Text=" - to sort and manage your tasks"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                    <!-- Data Storage Section -->
+                    <Label Text="💾 How We Store Your Data"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           TextColor="#2196F3"
+                           Margin="0,20,0,0"/>
+
+                    <Label Text="All your data is stored locally on your device in a secure database. We do NOT send your personal information to external servers or to any third parties."
+                           TextColor="White" 
+                           FontSize="14"/>
+
+                    <!-- Data Usage Section -->
+                    <Label Text="🔒 How We Use Your Data"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           TextColor="#2196F3"
+                           Margin="0,20,0,0"/>
+
+                    <Label TextColor="#555" FontSize="14">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="• To display and organize your tasks&#10;"/>
+                                <Span Text="• To calculate progress and statistics based on options you picked&#10;"/>
+                                <Span Text="• To provide search and filtering functionality&#10;"/>
+                                <Span Text="• To maintain app functionality across sessions"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                    <!-- User Rights Section -->
+                    <Label Text="✋ Your Rights"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           TextColor="#2196F3"
+                           Margin="0,20,0,0"/>
+
+                    <Label TextColor="#555" FontSize="14">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="• "/>
+                                <Span Text="View all your data" FontAttributes="Bold"/>
+                                <Span Text=" - access all tasks and notes anytime&#10;"/>
+                                <Span Text="•"/>
+                                <Span Text="Edit your data" FontAttributes="Bold"/>
+                                <Span Text=" - modify or update any content&#10;"/>
+                                <Span Text="• "/>
+                                <Span Text="Delete your data" FontAttributes="Bold"/>
+                                <Span Text=" - remove individual items or all data&#10;"/>
+                                <Span Text="• "/>
+                                <Span Text="Export your data" FontAttributes="Bold"/>
+                                <Span Text=" - backup your information"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                    <!-- Data Deletion Section -->
+                    <Label Text="🗑️ How to Delete Your Data"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           TextColor="#2196F3"
+                           Margin="0,20,0,0"/>
+
+                    <Label Text="You can delete your data at any time by:"
+                           TextColor="White" 
+                           FontSize="14"/>
+
+                    <Label TextColor="#555" FontSize="14" Margin="10,0,0,0">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="• Individual tasks: Use the delete button on any task&#10;"/>
+                                <Span Text="• Entire categories: Use the delete button on category headers&#10;"/>
+                                <Span Text="• All data: Uninstall and reinstall the app"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                    <!-- Contact Section -->
+                    <Label Text="📧 Questions?"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           TextColor="#2196F3"
+                           Margin="0,20,0,0"/>
+
+                    <Label Text="If you have any questions about this privacy policy or your data, please contact us through the app settings."
+                           TextColor="White" 
+                           FontSize="14"/>
+
+                </StackLayout>
+            </Border>
+
+            <!-- Consent Section -->
+            <Border BackgroundColor="#E3F2FD" 
+                   Stroke="#2196F3" 
+                   StrokeThickness="10" 
+                   Padding="15"
+                   Margin="0,20,0,0"
+                   Shadow="{OnPlatform Default='0,2,5,#40000000', iOS='0,1,3,#30000000'}">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10"/>
+                </Border.StrokeShape>
+
+                <StackLayout>
+                    <Label Text="Your Consent"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           TextColor="#1976D2"
+                           HorizontalTextAlignment="Center"/>
+
+                    <Label Text="By using this app, you consent to the collection and use of your data as described in this privacy policy."
+                           TextColor="#333"
+                           FontSize="14"
+                           HorizontalTextAlignment="Center"
+                           Margin="0,10,0,15"/>
+
+                    <!-- Consent Checkbox -->
+                    <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+                        <CheckBox x:Name="ConsentCheckBox" 
+                                  IsChecked="False"
+                                  CheckedChanged="ConsentCheckBox_CheckedChanged"/>
+                        <Label Text="I have read and agree to the privacy policy"
+                               FontSize="12"
+                               TextColor="#333"
+                               VerticalTextAlignment="Center"/>
+                    </HorizontalStackLayout>
+                </StackLayout>
+            </Border>
+
+            <!-- Continue Button -->
+            <Button x:Name="ContinueButton"
+                    Text="Continue to App"
+                    FontSize="18"
+                    FontAttributes="Bold"
+                    BackgroundColor="#2196F3"
+                    TextColor="White"
+                    CornerRadius="25"
+                    HeightRequest="50"
+                    IsEnabled="False"
+                    Opacity="0.5"
+                    Clicked="ContinueButton_Clicked"
+                    Margin="0,20,0,40"/>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

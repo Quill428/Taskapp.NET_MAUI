@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Globalization;
+﻿using System.Globalization;
 
 namespace NotesApp.Converters
 {
-    
+
 
     public class CompletedTextColorConverter : IValueConverter
     {
@@ -21,5 +16,5 @@ namespace NotesApp.Converters
             return null;
         }
     }
-    
+
 }

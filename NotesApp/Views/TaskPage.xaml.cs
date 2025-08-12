@@ -1,6 +1,5 @@
 ﻿namespace NotesApp.Views;
 using NotesApp.Models;  // to access Notes class
-using NotesApp.Data;    // if you refer to App.Database or your repo
 
 [QueryProperty(nameof(ItemId), nameof(ItemId))]
 [QueryProperty(nameof(NoteId), nameof(NoteId))]
@@ -31,15 +30,15 @@ public partial class TaskPage : ContentPage
 
 
     public TaskPage()
-	{
-		InitializeComponent();
+    {
+        InitializeComponent();
 
         //string appDataPath = FileSystem.AppDataDirectory;
         //string randomFileName = $"{Path.GetRandomFileName()}.notes.txt";
 
         //LoadNote(Path.Combine(appDataPath, randomFileName));
 
-        CategoryPicker.ItemsSource = categories;
+        //CategoryPicker.ItemsSource = categories;
     }
 
     //private int noteId;
@@ -87,12 +86,12 @@ public partial class TaskPage : ContentPage
     //        noteModel.Category = "Uncategorized";
     //    }
     //noteModel.Date = File.GetLastWriteTime(fileName);
-       
-        //if (!string.IsNullOrWhiteSpace(noteModel.Category) && categories.Contains(noteModel.Category))
-        //CategoryPicker.SelectedItem = noteModel.Category;    
+
+    //if (!string.IsNullOrWhiteSpace(noteModel.Category) && categories.Contains(noteModel.Category))
+    //CategoryPicker.SelectedItem = noteModel.Category;    
 
     private async void SaveButton_pressed(object sender, EventArgs e)
-	{
+    {
         try
         {
             if (BindingContext is Notes note)
@@ -167,15 +166,15 @@ public partial class TaskPage : ContentPage
         if (!string.IsNullOrWhiteSpace(newCat) && !categories.Contains(newCat))
         {
             categories.Add(newCat);
-            CategoryPicker.ItemsSource = null;
-            CategoryPicker.ItemsSource = categories;
-            CategoryPicker.SelectedItem = newCat;
+            //CategoryPicker.ItemsSource = null;
+            //CategoryPicker.ItemsSource = categories;
+            //CategoryPicker.SelectedItem = newCat;
             NewCategoryEntry.Text = string.Empty;
         }
     }
 
     private async void DeleteButton_pressed(object sender, EventArgs e)
-	{
+    {
         if (BindingContext is Models.Notes note)
         {
             // asks for confirmation

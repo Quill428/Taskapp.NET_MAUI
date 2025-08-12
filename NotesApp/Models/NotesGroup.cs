@@ -10,7 +10,8 @@ namespace NotesApp.Models
 {
     public class NotesGroup : ObservableCollection<Notes>, INotifyPropertyChanged
     {
-        // Static color list for different categories
+        //Assigns a random static colour from the following list 
+        private static readonly Dictionary<string, string> CategoryColorMap = new();
         private static readonly List<string> CategoryColors = new()
         {
             "#FF6B6B", "#4ECDC4", "#45B7D1", "#96CEB4", "#FFEAA7",
@@ -58,9 +59,14 @@ namespace NotesApp.Models
         {
             CategoryName = categoryName;
 
-            // Assign a unique color to this category
-            CategoryColor = CategoryColors[colorIndex % CategoryColors.Count];
-            colorIndex++;
+            // Assign a consistent colour to this category
+            if (!CategoryColorMap.ContainsKey(categoryName))
+            {
+                //assigning the colour
+                CategoryColorMap[categoryName] = CategoryColors[colorIndex % CategoryColors.Count];
+                colorIndex++;
+            }
+            CategoryColor = CategoryColorMap[categoryName];
 
             // Calculate initial progress
             UpdateProgress();

@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NotesApp.Models;
 
@@ -55,14 +50,14 @@ public class NotesHome
             .OrderBy(g => g.Key)
             .Select(g => new NotesGroup(g.Key, g.OrderByDescending(n => n.Date)));
 
-            foreach (var group in grouped)
-                GroupedNotes.Add(group);
+        foreach (var group in grouped)
+            GroupedNotes.Add(group);
 
-            //foreach (var note in notes)
-            //{
-            //    Console.WriteLine($"Loaded from DB: {note.Filename} - {note.Category}");
-            //}
-        
+        //foreach (var note in notes)
+        //{
+        //    Console.WriteLine($"Loaded from DB: {note.Filename} - {note.Category}");
+        //}
+
     }
     public async Task UpdateCategoryProgressAsync(int categoryId)
     {

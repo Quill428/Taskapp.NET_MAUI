@@ -4,19 +4,18 @@ namespace NotesApp.Views;
 using NotesApp.Models;
 //using ObjCBindings;
 using System;
-using System.Threading.Tasks;
 using System.Linq;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Threading.Tasks;
 
 
 public partial class NotesHomePage : ContentPage
 {
-	public NotesHomePage()
-	{
-		InitializeComponent();
-        
+    public NotesHomePage()
+    {
+        InitializeComponent();
+
         BindingContext = new NotesHome();
-	}
+    }
 
 
     protected override async void OnAppearing()
@@ -55,6 +54,22 @@ public partial class NotesHomePage : ContentPage
         //await Shell.Current.GoToAsync(nameof(TaskPage));
     }
 
+    private async void ResetPrivacy_Clicked(object sender, EventArgs e)
+    {
+        bool confirm = await DisplayAlert("Reset Privacy Policy",
+            "This will reset the privacy policy acceptance for testing. The app will restart and show the privacy policy again.",
+            "Yes", "No");
+
+        if (confirm)
+        {
+            App.ResetPrivacyPolicyAcceptance();
+            await DisplayAlert("Reset Complete", "App will restart to show privacy policy.", "OK");
+
+            // Restart the app to show privacy policy
+            Application.Current.MainPage = new NavigationPage(new Views.PrivacyPolicyPage());
+        }
+    }
+
     private async void notesCollection_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {
         if (e.CurrentSelection.Count != 0)
@@ -64,12 +79,12 @@ public partial class NotesHomePage : ContentPage
 
             // Should navigate to "NotePage?ItemId=path\on\device\XYZ.notes.txt"
             await Shell.Current.GoToAsync($"{nameof(TaskPage)}?NoteId={note.Id}");
-                //($"{nameof(TaskPage)}?{nameof(TaskPage.ItemId)}={note.Filename}");
+            //($"{nameof(TaskPage)}?{nameof(TaskPage.ItemId)}={note.Filename}");
 
             // Unselect the UI
             notesCollection.SelectedItem = null;
         }
-   
+
     }
     private async void CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
     {
@@ -104,7 +119,7 @@ public partial class NotesHomePage : ContentPage
 
         }
         //progress = (number of completed tasks in category / total tasks in category) *100
-        
+
 
     }
     private async Task UpdateCategoryProgressAsync(int categoryId)

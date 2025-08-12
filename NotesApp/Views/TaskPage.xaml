@@ -12,32 +12,28 @@
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
         
-        <!--Label Text="Category" /-->
-        <Picker x:Name="CategoryPicker"
-            Title="Category"
-            ItemsSource="{Binding Categories}"
-            ItemDisplayBinding="{Binding Name}"
-            SelectedItem="{Binding SelectedCategory}"/>
-
         <!-- Adding a new category -->
-        <HorizontalStackLayout>
-            <Entry x:Name="NewCategoryEntry" Placeholder="Add new category..." />
+        <!--<HorizontalStackLayout>-->
+            <Entry x:Name="NewCategoryEntry" TextColor="Black"
+BackgroundColor="White" Placeholder="Add new category..." HorizontalOptions="Center" WidthRequest="200"/>
             <!--Button Text="Add" Clicked="AddCategory_Clicked"/-->
-        </HorizontalStackLayout>
+        <!--</HorizontalStackLayout>-->
         
         <Editor x:Name="TextEditor"
             Placeholder="Type here..."
             Text="{Binding Text}"
             TextColor="Black"
-            WidthRequest="200"
-            HeightRequest="200"/>
-        <HorizontalStackLayout>
+            BackgroundColor="White"
+            WidthRequest="300"
+            HeightRequest="200"
+            Margin="25"/>
+        <HorizontalStackLayout HorizontalOptions="Center">
             <Button x:Name="SaveButton"
                     Text="Save"
-                    Clicked="SaveButton_pressed"/>
+                    Clicked="SaveButton_pressed" WidthRequest="100" Margin="2"/>
             <Button x:Name="DeleteButton"
                     Text="Delete"
-                    Clicked="DeleteButton_pressed"/>
+                    Clicked="DeleteButton_pressed" WidthRequest="100" Margin="2"/>
         </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>
